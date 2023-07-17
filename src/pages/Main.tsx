@@ -1,9 +1,10 @@
 import { StandardButton } from "@/ui/atoms"
 
+
 export const Main = () => {
     return (
         <div>
-            Main
+            <a href="" className="">Main</a>
             <StandardButton />
         </div>
     )
