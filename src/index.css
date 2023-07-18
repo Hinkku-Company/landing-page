@@ -3,31 +3,34 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Roboto";
-  src: url("./assets/fonts/Roboto-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("./assets/fonts/Roboto-Bold.ttf");
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("./assets/fonts/Roboto-Medium.ttf");
-}
-
-@font-face {
-  font-family: "Roboto";
+  font-family: Roboto;
   src: url("./assets/fonts/Roboto-Black.ttf");
+  font-weight: 900;
 }
+
+@font-face {
+  font-family: Roboto;
+  src: url("./assets/fonts/Roboto-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("./assets/fonts/Roboto-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("./assets/fonts/Roboto-Regular.ttf");
+  font-weight: 400;
+}
+
 
 :root {
-  font-family: "Roboto", system-ui, sans-serif;
+  font-family: Roboto, system-ui, sans-serif;
   text-rendering: optimizeLegibility;
   font-synthesis: none;
-  line-height: 1.5;
-  font-weight: 400;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -36,11 +39,21 @@
   color-scheme: light dark;
 
   /* font sizes Desktop*/
-  --font-s-big-title: 6rem;
-  --font-s-text: 1.25rem;
+  --font-s-big-title-d: 6rem;
+  --font-s-text-d: 1.25rem;
+  --font-s-buttons: 1.5rem;
+  --font-s-title-d: 4rem;
+  --font-s-subtitle-d: 2rem;
+  --font-s-footer-d: 1rem;
+
+  /* font sizes Mobile*/
+  --font-s-big-title: 2.5rem;
+  --font-s-text: 0.875rem;
   --font-s-title: 4rem;
   --font-s-subtitle: 2rem;
   --font-s-footer: 1rem;
+  --font-s-buttons: 1.25rem;
+  --font-s-input: 1rem;
 
   /* fonts weight */
   --font-w-big-title: bolder;
@@ -61,6 +74,9 @@
   --color-title: #000;
   --color-text: #000;
 
+  --color-border: #8C8C8C;
+
+  --color-bg-menu: #424242;
 
 
 }
@@ -69,31 +85,9 @@ html {
   font-family: "Roboto", system-ui, sans-serif;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
+  height: 2000px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-
-  a:hover {
-    color: #747bff;
-  }
-
-  button {
-    background-color: #f9f9f9;
-  }
-}
+@media (prefers-color-scheme: light) {}

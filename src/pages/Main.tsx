@@ -1,12 +1,11 @@
-import { StandardButton } from "@/ui/atoms"
-import { Hero } from "@/ui/molecules/Hero/Hero"
-
+import { Hero } from "@/ui/molecules/Hero";
+import Header from "@/ui/molecules/header/Header"
 
 export const Main = () => {
     return (
         <div>
+            <Header />
             <Hero />
-            {/* <StandardButton /> */}
         </div>
     )
 }

@@ -15,6 +15,12 @@ export interface Props {
 }
 
 export const StandardButton = ({ onClick, children, type, id, title = '', className = '', disabled, active, ripple }: Props) => {
+
+  const classes = `
+    standard-btn
+    ${className ?? ""} 
+    ${active ? 'btn-active' : ''}`;
+
   return (
     <button
       onClick={(ev) => {
@@ -22,8 +28,7 @@ export const StandardButton = ({ onClick, children, type, id, title = '', classN
         onClick(ev);
       }}
       type={type}
-      className={`standard-btn ${className} ${active ? 'btn-active' : ''
-        }`}
+      className={classes}
       id={id}
       disabled={disabled}
       title={title}

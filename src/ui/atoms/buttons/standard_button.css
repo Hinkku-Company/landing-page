@@ -1,3 +1,12 @@
 .standard-btn {
+    display: grid;
+    place-content: center;
     background-color: var(--primary);
+    padding: 1.875rem 1.25rem;
+    border-radius: .5rem;
+    font-size: var(--font-s-buttons);
+    max-height: 60px;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: 400;
 }
