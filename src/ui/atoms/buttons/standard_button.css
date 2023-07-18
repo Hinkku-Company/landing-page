@@ -1,6 +1,7 @@
 .standard-btn {
     display: grid;
     place-content: center;
+    position: relative;
     background-color: var(--primary);
     padding: 1.875rem 1.25rem;
     border-radius: .5rem;
@@ -9,4 +10,10 @@
     text-align: center;
     white-space: nowrap;
     font-weight: 400;
+    transition: background 400ms;
+    overflow: hidden;
+}
+
+.standard-btn:focus {
+    outline: none;
 }
