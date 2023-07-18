@@ -9,6 +9,9 @@ dependencies:
     version: 18.2.0(react@18.2.0)
 
 devDependencies:
+  '@types/autoprefixer':
+    specifier: ^10.2.0
+    version: 10.2.0(postcss@8.4.26)
   '@types/node':
     specifier: ^20.4.2
     version: 20.4.2
@@ -484,6 +487,15 @@ packages:
       '@swc/core-win32-arm64-msvc': 1.3.69
       '@swc/core-win32-ia32-msvc': 1.3.69
       '@swc/core-win32-x64-msvc': 1.3.69
+    dev: true
+
+  /@types/autoprefixer@10.2.0(postcss@8.4.26):
+    resolution: {integrity: sha512-ClU0uw3HhUra890K4xcf2IQxD6w0WOjPIaKb8jrRXYPHvvUW1P5dGufPlDtTo5gtWPWH+4L6tSBAoAKVf93uBQ==}
+    deprecated: This is a stub types definition. autoprefixer provides its own type definitions, so you do not need this installed.
+    dependencies:
+      autoprefixer: 10.4.14(postcss@8.4.26)
+    transitivePeerDependencies:
+      - postcss
     dev: true
 
   /@types/json-schema@7.0.12:

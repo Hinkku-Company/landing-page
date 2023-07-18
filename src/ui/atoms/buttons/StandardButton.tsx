@@ -1,6 +1,40 @@
-export const StandardButton = () => {
+import { createRipple } from "@/utils/ripple-effect/ripple-effect";
+import { MouseEvent, ReactNode } from "react";
+import './standard_button.css';
+
+export interface Props {
+  onClick: (ev: MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => unknown;
+  children: ReactNode;
+  type?: 'submit' | 'reset' | 'button' | undefined;
+  id?: string;
+  title?: string;
+  className?: string;
+  disabled?: boolean;
+  active?: boolean;
+  ripple: boolean;
+}
+
+export const StandardButton = ({ onClick, children, type, id, title = '', className = '', disabled, active, ripple = false }: Props) => {
+
+  const classes = `
+    standard-btn
+    ${className ?? ""} 
+    ${active ? 'btn-active' : ''}`;
+
   return (
-    <button>StandarButton</button>
+    <button
+      onClick={(ev) => {
+        ripple && createRipple(ev);
+        onClick(ev);
+      }}
+      type={type}
+      className={classes}
+      id={id}
+      disabled={disabled}
+      title={title}
+    >
+      {children}
+    </button>
   )
 }
 
