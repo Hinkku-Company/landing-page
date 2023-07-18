@@ -1,0 +1,2 @@
+export const BigTitleText = 'Conéctate con tus clientes sin esfuerzo.'
+export const TitleText = 'Nuestra aplicación facilita que los peluqueros se conecten con sus clientes y gestionen las citas y estadisticas de manera fluida.'
