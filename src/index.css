@@ -48,18 +48,18 @@
 
   /* font sizes Mobile*/
   --font-s-big-title: 2.5rem;
+  --font-s-title: 2rem;
   --font-s-text: 0.875rem;
-  --font-s-title: 4rem;
-  --font-s-subtitle: 2rem;
+  --font-s-subtitle: 1.25rem;
   --font-s-footer: 1rem;
   --font-s-buttons: 1.25rem;
   --font-s-input: 1rem;
 
   /* fonts weight */
-  --font-w-big-title: bolder;
+  --font-w-big-title: 900;
   --font-w-text: 500;
-  --font-w-title: bolder;
-  --font-w-subtitle: bolder;
+  --font-w-title: 900;
+  --font-w-subtitle: 900;
   --font-w-footer: 400;
 
 
@@ -77,7 +77,8 @@
   --color-border: #8C8C8C;
 
   --color-bg-menu: #424242;
-
+  --color-bg-section: #F3F3F3;
+  --color-bg-white: #FFFFFF;
 
 }
 
@@ -88,6 +89,20 @@ html {
 body {
   margin: 0;
   height: 2000px;
+}
+
+ul, li, ol {
+  list-style: none;
+}
+
+.custom-title {
+  font-size: var(--font-s-title);
+  letter-spacing: -1.8px;
+  line-height: 100%;
+}
+
+.custom-text {
+  font-size: var(--font-s-text);
 }
 
 @media (prefers-color-scheme: light) {}

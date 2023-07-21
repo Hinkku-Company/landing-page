@@ -26,7 +26,7 @@ export const Hero = () => {
 
                             <div className="row-span-1 grid gap-4">
                                 <StandardInput type="text" placeholder='tucorreo@gmail.com' />
-                                <StandardButton className='hero-btn' onClick={() => { }}>GET STARTED</StandardButton>
+                                <StandardButton ripple className='hero-btn' onClick={() => { }}>GET STARTED</StandardButton>
                             </div>
                         </div>
                     </div>

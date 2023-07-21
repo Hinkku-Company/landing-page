@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { CloseIcon, AphroditeIcon, HamburgerIcon } from '@/ui/atoms/icons';
 import "./Header.css";
-export default function Headers() {
+export const Header = () => {
     const [navbar, setNavbar] = useState(false);
 
     const itemsMenu = [
@@ -51,8 +51,8 @@ export default function Headers() {
                                 }`}
                         >
                             <ul className="mt-40 items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-center font-medium">
-                                {itemsMenu.map(item =>
-                                    <li>{item.title}</li>
+                                {itemsMenu.map((item, idx: number) =>
+                                    <li key={idx}>{item.title}</li>
                                 )}
 
                             </ul>
