@@ -1,12 +1,12 @@
 import { SlideContent } from "@/ui/molecules/SlideContent";
 import { Hero } from "@/ui/molecules/Hero";
-import { Header } from "@/ui/molecules/Header"
+import { Header } from "@/ui/molecules/header";
 import { SectionsMobile } from "@/ui/atoms/SectionsMobile";
 import { SectionInvitation } from "@/ui/molecules/SectionInvitation";
 import { Footer } from "@/ui/molecules/Footer";
-import ImageSection1 from "@/assets/imgs/imgtest1.png"
-import ImageSection2 from "@/assets/imgs/imgtest2.png"
-import ImageSection3 from "@/assets/imgs/imgtest3.png"
+import ImageSection1 from "@/assets/imgs/imgtest1.png";
+import ImageSection2 from "@/assets/imgs/imgtest2.png";
+import ImageSection3 from "@/assets/imgs/imgtest3.png";
 
 export const Main = () => {
 
