@@ -1,6 +1,5 @@
 import { Carousel } from './Carousel/Carousel';
 import './content.css';
-import { slideData } from './slideData';
 
 export const SlideContent = () => {
 
