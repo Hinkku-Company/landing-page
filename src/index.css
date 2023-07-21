@@ -79,6 +79,7 @@
   --color-bg-menu: #424242;
   --color-bg-section: #F3F3F3;
   --color-bg-white: #FFFFFF;
+  --color-bg-black: #0000;
 
 }
 
@@ -93,6 +94,11 @@ body {
 
 ul, li, ol {
   list-style: none;
+}
+
+.link {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .custom-title {
