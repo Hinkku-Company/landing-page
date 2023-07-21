@@ -11,7 +11,7 @@ export interface Props {
   className?: string;
   disabled?: boolean;
   active?: boolean;
-  ripple: boolean;
+  ripple?: boolean;
 }
 
 export const StandardButton = ({ onClick, children, type, id, title = '', className = '', disabled, active, ripple = false }: Props) => {
