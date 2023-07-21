@@ -11,7 +11,6 @@ interface Props {
 }
 
 export const SectionsMobile = ({ sections }: Props) => {
-    console.log(sections)
     return (
         <>
             {
