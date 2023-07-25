@@ -81,6 +81,7 @@
 
 html {
     font-family: "Roboto", system-ui, sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -105,4 +106,10 @@ ul, li, ol {
 
 .custom-text {
     font-size: var(--font-s-text);
+}
+
+.icon-menu-container {
+    font-size: 2rem;
+    width: 120px;
+    height: 32px;
 }

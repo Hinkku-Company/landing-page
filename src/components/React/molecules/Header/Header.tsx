@@ -1,21 +1,49 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { CloseIcon, AphroditeIcon, HamburgerIcon } from '@components/React/atoms';
 import "./Header.css";
 export const Header = () => {
     const [navbar, setNavbar] = useState(false);
+    const [sticky, setSticky] = useState(false);
+
+    // on render, set listener
+    useEffect(() => {
+        const isSticky = () => {
+            /* Method that will fix header after a specific scrollable */
+            const scrollTop = window.scrollY;
+            const stickyClass = scrollTop >= 100;
+            setSticky(stickyClass);
+        };
+        window.addEventListener("scroll", isSticky);
+        return () => {
+            window.removeEventListener("scroll", isSticky);
+        };
+    }, []);
+
+    const goToSection = (id: string) => {
+        setNavbar(false);
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView();
+        }
+    }
+
 
     const itemsMenu = [
         {
-            title: "INICIO"
+            title: "Inicio",
+            id: 'home'
         },
         {
-            title: "SERVICIOS"
+            title: "Servicios",
+            id: 'services'
         },
         {
-            title: "NOSOTROS"
+            title: "Nosotros",
+            id: 'about'
         },
         {
-            title: "CONTACTO"
+            title: "Contacto",
+            id: 'contact'
         }
     ]
 
@@ -23,7 +51,7 @@ export const Header = () => {
         <div className='relative'>
             <nav className={`'w-full container-menu fixed z-10 w-full`}>
                 <div className={`w-full ${navbar ? 'h-screen' : ''}`}>
-                    <div className="relative z-20">
+                    <div className={`${sticky && !navbar ? 'navbar-bg' : ''} relative z-20`}>
                         <div className="flex items-center justify-between py-2 px-6 md:py-5 md:block">
                             <a>
                                 <AphroditeIcon SvgClassName="icon-menu-container" />
@@ -44,13 +72,13 @@ export const Header = () => {
                         </div>
                     </div>
 
-                    <div className={`${navbar ? "grid" : "hidden"} fixed z-10 top-0 bottom-0 left-0 right-0`}>
+                    <div className={`${navbar ? "grid" : "hidden"} animated fixed z-10 top-0 bottom-0 left-0 right-0`}>
                         <div
-                            className={`${navbar ? "grid" : "hidden"} items-center bg-[--color-bg-menu] w-full`}
+                            className={`grid items-center bg-[--color-bg-menu] w-full`}
                         >
                             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-center font-medium">
                                 {itemsMenu.map((item, idx: number) =>
-                                    <li key={idx} onClick={() => console.log(item.title)}>{item.title}</li>
+                                    <li key={idx} onClick={() => goToSection(item.id)}>{item.title}</li>
                                 )}
 
                             </ul>

@@ -8,16 +8,18 @@ export const BigTitleText2 = "tus clientes";
 export const BigTitleText3 = "sin esfuerzo.";
 export const TitleText =
   "Nuestra aplicación facilita que los peluqueros se conecten con sus clientes y gestionen las citas y estadisticas de manera fluida.";
+
+import { IdHome } from "@/utils/contantes";
 ---
 
 {
   (
-    <div class="w-full h-[37.5rem] relative">
+    <div id={IdHome} class="w-full h-[37.5rem] relative">
       <div class="w-full h-full relative">
         <img
           class="w-full h-full img-hero"
           src={HeroImage}
-          alt="Image about a haircut in a salon "
+          alt="Image about a haircut in a salon"
         />
 
         <div class="w-full h-full relative opacity">
