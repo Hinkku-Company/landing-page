@@ -1,8 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import { Header } from "@components/React/molecules";
+import Hero from "@components/Hero/index.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main></main>
+  <Header client:load />
+  <Hero />
+  <main>Hola</main>
 </Layout>

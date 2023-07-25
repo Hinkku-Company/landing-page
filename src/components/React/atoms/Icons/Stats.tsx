@@ -1,5 +1,5 @@
 
-import { CSSProperties } from "react"
+import type { CSSProperties } from "react"
 
 type Props = {
     SvgClassName?: string,

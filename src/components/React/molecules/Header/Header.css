@@ -1,0 +1,32 @@
+/* @media (max-width: 768px) {
+
+    .container-menu {
+        background: transparent;
+        position: absolute;
+        margin: 0;
+        left: 0;
+        z-index: 9;
+        width: 100px;
+    }
+
+    .responsive-menu-container {
+        position: absolute;
+        z-index: 999;
+        background: var(--color-bg-menu);
+        width: 100%;
+        left: 0;
+        color: var(--secondary);
+        top: 4.5rem;
+
+    }
+
+    .icon-menu-open-and-close {
+        width: 2rem;
+    }
+
+} */
+.icon-menu-container {
+    font-size: 2rem;
+    width: 120px;
+    height: 32px;
+}
