@@ -1,0 +1,115 @@
+@font-face {
+    font-family: Roboto;
+    src: url("../assets/fonts/Roboto-Black.ttf");
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("../assets/fonts/Roboto-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("../assets/fonts/Roboto-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("../assets/fonts/Roboto-Regular.ttf");
+    font-weight: 400;
+}
+
+
+:root {
+    font-family: Roboto, system-ui, sans-serif;
+    text-rendering: optimizeLegibility;
+    font-synthesis: none;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+
+    color-scheme: light dark;
+
+    /* font sizes Desktop*/
+    --font-s-big-title-d: 6rem;
+    --font-s-text-d: 1.25rem;
+    --font-s-buttons: 1.5rem;
+    --font-s-title-d: 4rem;
+    --font-s-subtitle-d: 2rem;
+    --font-s-footer-d: 1rem;
+
+    /* font sizes Mobile*/
+    --font-s-big-title: 2.5rem;
+    --font-s-title: 2rem;
+    --font-s-text: 0.875rem;
+    --font-s-subtitle: 1.25rem;
+    --font-s-footer: 1rem;
+    --font-s-buttons: 1.25rem;
+    --font-s-input: 1rem;
+
+    /* fonts weight */
+    --font-w-big-title: 900;
+    --font-w-text: 500;
+    --font-w-title: 900;
+    --font-w-subtitle: 900;
+    --font-w-footer: 400;
+
+
+    /* Colors */
+    --primary: #09C7B0;
+    --secondary: #FFFFFF;
+    --neutral: #6B7280;
+    --info: #787878;
+    --accent: #646cff;
+
+    --color-big-title: #FFFFFF;
+    --color-title: #000;
+    --color-text: #000;
+
+    --color-border: #8C8C8C;
+
+    --color-bg-menu: #424242;
+    --color-bg-section: #F3F3F3;
+    --color-bg-white: #FFFFFF;
+    --color-bg-black: #0000;
+
+}
+
+html {
+    font-family: "Roboto", system-ui, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    height: 2000px;
+}
+
+ul, li, ol {
+    list-style: none;
+}
+
+.link {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.custom-title {
+    font-size: var(--font-s-title);
+    letter-spacing: -1.8px;
+    line-height: 100%;
+}
+
+.custom-text {
+    font-size: var(--font-s-text);
+}
+
+.icon-menu-container {
+    font-size: 2rem;
+    width: 120px;
+    height: 32px;
+}

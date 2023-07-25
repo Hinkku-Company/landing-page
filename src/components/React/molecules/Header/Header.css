@@ -1,0 +1,21 @@
+.navbar-bg {
+    background: hsla(0, 0%, 0%, 0.562);
+    box-shadow: 0 8px 22px 0 rgba(31, 38, 135, .37);
+    backdrop-filter: blur(4px);
+}
+
+.animated {
+    animation: fadeInLeft ease .4s;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

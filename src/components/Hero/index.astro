@@ -1,0 +1,50 @@
+---
+import "./hero.css";
+import HeroImage from "@/assets/imgs/heroImg.png";
+import { StandardButton, StandardInput } from "@components/React/atoms";
+
+export const BigTitleText1 = "Conéctate con";
+export const BigTitleText2 = "tus clientes";
+export const BigTitleText3 = "sin esfuerzo.";
+export const TitleText =
+  "Nuestra aplicación facilita que los peluqueros se conecten con sus clientes y gestionen las citas y estadisticas de manera fluida.";
+
+import { IdHome } from "@/utils/contantes";
+---
+
+{
+  (
+    <div id={IdHome} class="w-full h-[37.5rem] relative">
+      <div class="w-full h-full relative">
+        <img
+          class="w-full h-full img-hero"
+          src={HeroImage}
+          alt="Image about a haircut in a salon"
+        />
+
+        <div class="w-full h-full relative opacity">
+          <div class="w-full h-full grid place-content-center">
+            <div class="container-text-header w-[18rem] relative grid grid-rows-3 gap-3">
+              <div class="row-span-3">
+                <p class="text-[--color-big-title] font-[900]">
+                  {BigTitleText1} <br /> {BigTitleText2} <br /> {BigTitleText3}
+                </p>
+              </div>
+
+              <div class="row-span-2">
+                <p class="text-[--color-big-title]">{TitleText}</p>
+              </div>
+
+              <div class="row-span-1 grid gap-4">
+                <StandardInput type="text" placeholder="tucorreo@example.com" />
+                <StandardButton ripple className="hero-btn" onClick={() => {}}>
+                  GET STARTED
+                </StandardButton>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
