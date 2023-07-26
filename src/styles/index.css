@@ -60,9 +60,11 @@
     --font-w-footer: 400;
 
     /* paddings */
-    --padding-sections: 5.8rem
-        /* Colors */
-        --primary: #09C7B0;
+    --padding-sections: 5.8rem;
+
+
+    /* Colors */
+    --primary: #09C7B0;
     --secondary: #FFFFFF;
     --neutral: #6B7280;
     --info: #787878;
