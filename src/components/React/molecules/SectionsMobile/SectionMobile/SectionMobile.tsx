@@ -8,7 +8,7 @@ interface Props {
 
 export const SectionMobile = ({ title, imgSrc, texts, bgColor, idSection }: Props) => {
     return (
-        <div id={idSection} className={`py-[3.125rem] px-[1.7rem]`} style={{ backgroundColor: bgColor }}>
+        <section id={idSection} className={`py-[3.125rem] px-[1.7rem]`} style={{ backgroundColor: bgColor }}>
             <div className="grid place-items-center w-full">
                 <div className="grid bg-[--primary] w-[18rem] h-[0.625rem] rounded-t-[.2rem]"></div>
 
@@ -24,6 +24,6 @@ export const SectionMobile = ({ title, imgSrc, texts, bgColor, idSection }: Prop
                     <p key={index} className="custom-text font-[--font-w-text] text-[--color-text] pb-[1.20rem]">{text}</p>
                 )
             }
-        </div>
+        </section>
     )
 }

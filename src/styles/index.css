@@ -82,6 +82,7 @@
 html {
     font-family: "Roboto", system-ui, sans-serif;
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
