@@ -27,7 +27,6 @@ export const Header = () => {
         }
     }
 
-
     const itemsMenu = [
         {
             title: "Inicio",
@@ -45,19 +44,32 @@ export const Header = () => {
             title: "Contacto",
             id: 'contact'
         }
-    ]
+    ];
 
     return (
         <div className='relative'>
-            <nav className={`'w-full container-menu fixed z-10 w-full`}>
+            <nav className={`'w-full fixed z-10 w-full`}>
                 <div className={`w-full ${navbar ? 'h-screen' : ''}`}>
+
                     <div className={`${sticky && !navbar ? 'navbar-bg' : ''} relative z-20`}>
-                        <div className="flex items-center justify-between py-2 px-6 md:py-5 md:block">
-                            <a>
+                        <div className="container mx-auto flex items-center justify-between py-2 px-3 md:py-5">
+                            <a href='#home'>
                                 <AphroditeIcon SvgClassName="icon-menu-container" />
                             </a>
-                            <div className="md:hidden">
 
+                            <div className='hidden md:flex'>
+                                <ul className="font-menu-d font-medium flex gap-[1.25rem]">
+                                    {itemsMenu.map((item, idx: number) =>
+                                        <li key={idx} onClick={() => goToSection(item.id)}>
+                                            <p>
+                                                {item.title}
+                                            </p>
+                                        </li>
+                                    )}
+                                </ul>
+                            </div>
+
+                            <div className="md:hidden">
                                 <button
                                     className="p-2 text-gray-700 rounded-md outline-none"
                                     onClick={() => setNavbar(!navbar)}
@@ -72,7 +84,7 @@ export const Header = () => {
                         </div>
                     </div>
 
-                    <div className={`${navbar ? "grid" : "hidden"} animated fixed z-10 top-0 bottom-0 left-0 right-0`}>
+                    <div className={`${navbar ? "grid" : "hidden"} md:hidden animated fixed z-10 top-0 bottom-0 left-0 right-0`}>
                         <div
                             className={`grid items-center bg-[--color-bg-menu] w-full`}
                         >

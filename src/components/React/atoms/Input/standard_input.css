@@ -9,7 +9,14 @@
     border-radius: 5px;
     border: 1px solid var(--color-border);
     background-color: white;
-    font-family: var(--font-s-input);
+    font-size: var(--font-s-input);
     font-weight: 400;
     color: var(--color-text);
+}
+
+@media screen and (min-width: 1024px) {
+    .standard-input {
+        font-size: var(--font-s-input-d);
+    }
+
 }

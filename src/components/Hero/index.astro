@@ -14,7 +14,10 @@ import { IdHome } from "@/utils/contantes";
 
 {
   (
-    <div id={IdHome} class="w-full h-[37.5rem] relative">
+    <div
+      id={IdHome}
+      class="w-full h-[37.5rem] mh-[67.5rem] relative md:h-[100vh]"
+    >
       <div class="w-full h-full relative">
         <img
           class="w-full h-full img-hero"
@@ -23,8 +26,8 @@ import { IdHome } from "@/utils/contantes";
         />
 
         <div class="w-full h-full relative opacity">
-          <div class="w-full h-full grid place-content-center">
-            <div class="container-text-header w-[18rem] relative grid grid-rows-3 gap-3">
+          <div class="w-full h-full container mx-auto flex items-center justify-center md:justify-start">
+            <div class="container-text-header relative grid grid-rows-3 gap-3 w-[18rem] md:w-[68%] md:max-w-[40rem] md:ml-[4.5rem] md:mt-[4.5rem]">
               <div class="row-span-3">
                 <p class="text-[--color-big-title] font-[900]">
                   {BigTitleText1} <br /> {BigTitleText2} <br /> {BigTitleText3}
