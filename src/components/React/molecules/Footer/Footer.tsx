@@ -17,13 +17,19 @@ export const Footer = () => {
                         Copyright &copy; Colombia 2022 All rights reserved
                     </p>
 
-                    <a className='link text-[13px]'>
-                        Terms
-                    </a>
+                    <div className='flex gap-2'>
+                        <a className='link text-[13px]'>
+                            Terms
+                        </a>
 
-                    <a className='link text-[13px]'>
-                        Privacy
-                    </a>
+                        <p className='text-[13px]'>
+                            and
+                        </p>
+
+                        <a className='link text-[13px]'>
+                            Privacy
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
