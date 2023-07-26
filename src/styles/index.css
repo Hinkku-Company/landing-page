@@ -38,8 +38,8 @@
     --font-s-big-title-d: 5.125rem;
     --font-s-text-d: 1.25rem;
     --font-s-buttons-d: 1.5rem;
-    --font-s-title-d: 4rem;
-    --font-s-subtitle-d: 2rem;
+    --font-s-title-d: 3rem;
+    --font-s-subtitle-d: 1.75rem;
     --font-s-footer-d: 1rem;
     --font-s-input-d: 1.5rem;
 
@@ -59,9 +59,10 @@
     --font-w-subtitle: 900;
     --font-w-footer: 400;
 
-
-    /* Colors */
-    --primary: #09C7B0;
+    /* paddings */
+    --padding-sections: 5.8rem
+        /* Colors */
+        --primary: #09C7B0;
     --secondary: #FFFFFF;
     --neutral: #6B7280;
     --info: #787878;

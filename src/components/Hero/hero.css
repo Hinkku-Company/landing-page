@@ -20,7 +20,7 @@ button.hero-btn {
     margin-bottom: 7px
 }
 
-.container-text-header div:nth-child(1) p {
+.container-text-header div:nth-child(1) h1 {
     font-size: var(--font-s-big-title);
     line-height: 40px;
 }
@@ -41,7 +41,7 @@ button.hero-btn {
 }
 
 @media screen and (min-width: 1024px) {
-    .container-text-header div:nth-child(1) p {
+    .container-text-header div:nth-child(1) h1 {
         font-size: clamp(var(--font-s-big-title), 5vw, var(--font-s-big-title-d));
         line-height: clamp(40px, 5vw, 68px);
     }
