@@ -7,6 +7,10 @@ export const Header = () => {
 
     // on render, set listener
     useEffect(() => {
+
+        if (window.scrollY >= 100)
+            setSticky(true);
+
         const isSticky = () => {
             /* Method that will fix header after a specific scrollable */
             const scrollTop = window.scrollY;
