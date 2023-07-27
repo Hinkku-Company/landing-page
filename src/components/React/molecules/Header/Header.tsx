@@ -26,7 +26,9 @@ export const Header = () => {
     const goToSection = (id: string) => {
         setNavbar(false);
         const element = document.getElementById(id);
+
         if (element) {
+            console.log(element, id)
             element.scrollIntoView();
         }
     }

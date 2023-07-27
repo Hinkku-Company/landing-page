@@ -4,6 +4,8 @@ import ImageSection1 from "@/assets/imgs/imgtest1.png";
 import ImageSection2 from "@/assets/imgs/imgtest2.png";
 import ImageSection3 from "@/assets/imgs/imgtest3.png";
 
+import MobileContent from "./MobileContent.astro";
+
 const sections: {
   title: string;
   imgSrc: string;
@@ -48,14 +50,16 @@ const sections: {
 <div class="sections-d">
   <section
     id={sections[0].idSection}
-    class={`py-[--padding-sections] px-[1.7rem] hidden md:grid`}
+    class={`md:py-[--padding-sections] py-[3.125rem] px-[1.7rem] grid`}
     style={{ backgroundColor: sections[0].bgColor }}
   >
+    <!-- mobile -->
+    <MobileContent {...sections[0]} />
+    <!-- dekstop -->
     <div
-      class="section-img-container-d grid justify-center gap-[4.375rem] container mx-auto"
+      class="section-img-container-d hidden md:grid justify-center gap-[4.375rem] container mx-auto"
     >
       <div class="grid place-items-center w-full order-2 relative">
-        {/* section 1 */}
         <div
           class="grid bg-[--primary] rounded-t-[.2rem] absolute top-[-1rem] right-[-1rem] w-[7.5rem] h-[60%]"
         >
@@ -88,11 +92,14 @@ const sections: {
   <!-- 2 -->
   <section
     id={sections[1].idSection}
-    class={`py-[--padding-sections] px-[1.7rem] hidden md:grid`}
+    class={`md:py-[--padding-sections] py-[3.125rem] px-[1.7rem] grid`}
     style={{ backgroundColor: sections[1].bgColor }}
   >
+    <!-- mobile -->
+    <MobileContent {...sections[1]} />
+    <!-- dekstop -->
     <div
-      class="section-img-container-d grid place-items-center justify-center gap-[4.375rem] container mx-auto"
+      class="section-img-container-d hidden md:grid place-items-center justify-center gap-[4.375rem] container mx-auto"
     >
       <div class="grid place-items-center w-full relative">
         <div
@@ -127,11 +134,14 @@ const sections: {
   <!-- 3 -->
   <section
     id={sections[2].idSection}
-    class={`py-[--padding-sections] px-[1.7rem] hidden md:grid`}
+    class={`md:py-[--padding-sections] py-[3.125rem] py-[3.125rem] px-[1.7rem] grid`}
     style={{ backgroundColor: sections[2].bgColor }}
   >
+    <!-- mobile -->
+    <MobileContent {...sections[2]} />
+    <!-- dekstop -->
     <div
-      class="section-img-container-d grid place-items-center justify-center gap-[4.375rem] container mx-auto"
+      class="section-img-container-d hidden md:grid place-items-center justify-center gap-[4.375rem] container mx-auto"
     >
       <div class="grid place-items-center w-full relative order-2">
         <div

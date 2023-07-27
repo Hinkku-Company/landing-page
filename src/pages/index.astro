@@ -5,7 +5,6 @@ import {
   SlideContent,
   SectionInvitation,
   Footer,
-  SectionsMobile,
 } from "@components/React/molecules";
 import Hero from "@components/Hero/index.astro";
 import Sections from "@components/Sections/index.astro";
@@ -15,8 +14,6 @@ import Sections from "@components/Sections/index.astro";
   <Header client:load />
   <Hero />
   <SlideContent client:load />
-  <!-- visible only in mobile view < 760px -->
-  <SectionsMobile client:load />
   <Sections />
   <SectionInvitation client:load />
   <Footer client:visible />
