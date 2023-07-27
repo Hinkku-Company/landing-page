@@ -18,14 +18,13 @@ export const Header = () => {
             setSticky(stickyClass);
         };
         window.addEventListener("scroll", isSticky);
-        return () => {
-            window.removeEventListener("scroll", isSticky);
-        };
+        return () => window.removeEventListener("scroll", isSticky);
     }, []);
 
     const goToSection = (id: string) => {
         setNavbar(false);
         const element = document.getElementById(id);
+
         if (element) {
             element.scrollIntoView();
         }
