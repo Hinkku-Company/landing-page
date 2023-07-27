@@ -18,9 +18,7 @@ export const Header = () => {
             setSticky(stickyClass);
         };
         window.addEventListener("scroll", isSticky);
-        return () => {
-            window.removeEventListener("scroll", isSticky);
-        };
+        return () => window.removeEventListener("scroll", isSticky);
     }, []);
 
     const goToSection = (id: string) => {
@@ -28,7 +26,6 @@ export const Header = () => {
         const element = document.getElementById(id);
 
         if (element) {
-            console.log(element, id)
             element.scrollIntoView();
         }
     }
