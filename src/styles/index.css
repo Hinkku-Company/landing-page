@@ -79,7 +79,7 @@
     --color-bg-menu: #424242;
     --color-bg-section: #F3F3F3;
     --color-bg-white: #FFFFFF;
-    --color-bg-black: #0000;
+    --color-bg-black: #000;
 
 }
 
@@ -92,6 +92,7 @@ html {
 body {
     margin: 0;
     height: 2000px;
+    background-color: var(--color-bg-white);
 }
 
 ul, li, ol {
@@ -120,6 +121,15 @@ ul, li, ol {
 }
 
 @media screen and (min-width: 1024px) {
+
+    .custom-title {
+        font-size: clamp(var(--font-s-title), 3.4vw, var(--font-s-title-d));
+    }
+
+    .custom-text {
+        font-size: clamp(1rem, 1vw, 1.125rem);
+    }
+
     .icon-menu-container {
         font-size: 3rem;
         width: 178px;

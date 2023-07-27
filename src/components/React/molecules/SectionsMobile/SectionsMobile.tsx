@@ -10,7 +10,7 @@ export const SectionsMobile = () => {
         imgSrc: string
         texts: string[]
         bgColor: string,
-        idSection: string
+        idSection: "services" | "about" | "contact"
     }[] = [{
         title: "Descubre los mejores salones de belleza según la opinión de nuestros usuarios.",
         imgSrc: ImageSection1,
