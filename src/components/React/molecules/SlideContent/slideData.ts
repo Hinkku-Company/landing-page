@@ -7,7 +7,7 @@ export const slideData = [
         title: 'Sistema de clasificacion'
     }, {
         Icon: StatsIcon,
-        text: 'tendrás a tu disposición herramientas necesarias para controlar tus ventas, facturas, estadísticas y más. Simplifica la gestión diaria de tu negocio de peluquería y toma el control completo.',
+        text: 'Tendrás a tu disposición herramientas necesarias para controlar tus ventas, facturas, estadísticas y más. Simplifica la gestión diaria de tu negocio de peluquería y toma el control completo.',
         title: 'Gestiona tu negocio '
     }, {
         Icon: StadisticIcon,

@@ -17,3 +17,10 @@
 .standard-btn:focus {
     outline: none;
 }
+
+@media screen and (min-width: 1024px) {
+    .standard-btn {
+        font-size: var(--font-s-buttons-d);
+    }
+
+}

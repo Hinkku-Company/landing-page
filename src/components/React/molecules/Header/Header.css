@@ -19,3 +19,9 @@
         transform: translateX(0);
     }
 }
+
+.font-menu-d li p {
+    font-size: clamp(1rem, 1.55vw, 1.5rem);
+    cursor: pointer;
+    padding-inline: clamp(.4rem, 0.5vw, .8rem);
+}

@@ -35,12 +35,13 @@
     color-scheme: light dark;
 
     /* font sizes Desktop*/
-    --font-s-big-title-d: 6rem;
+    --font-s-big-title-d: 5.125rem;
     --font-s-text-d: 1.25rem;
-    --font-s-buttons: 1.5rem;
-    --font-s-title-d: 4rem;
-    --font-s-subtitle-d: 2rem;
+    --font-s-buttons-d: 1.5rem;
+    --font-s-title-d: 3rem;
+    --font-s-subtitle-d: 1.75rem;
     --font-s-footer-d: 1rem;
+    --font-s-input-d: 1.5rem;
 
     /* font sizes Mobile*/
     --font-s-big-title: 2.5rem;
@@ -48,7 +49,7 @@
     --font-s-text: 0.875rem;
     --font-s-subtitle: 1.25rem;
     --font-s-footer: 1rem;
-    --font-s-buttons: 1.25rem;
+    --font-s-buttons: 1.125rem;
     --font-s-input: 1rem;
 
     /* fonts weight */
@@ -57,6 +58,9 @@
     --font-w-title: 900;
     --font-w-subtitle: 900;
     --font-w-footer: 400;
+
+    /* paddings */
+    --padding-sections: 5.8rem;
 
 
     /* Colors */
@@ -75,18 +79,20 @@
     --color-bg-menu: #424242;
     --color-bg-section: #F3F3F3;
     --color-bg-white: #FFFFFF;
-    --color-bg-black: #0000;
+    --color-bg-black: #000;
 
 }
 
 html {
     font-family: "Roboto", system-ui, sans-serif;
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
     margin: 0;
     height: 2000px;
+    background-color: var(--color-bg-white);
 }
 
 ul, li, ol {
@@ -112,4 +118,21 @@ ul, li, ol {
     font-size: 2rem;
     width: 120px;
     height: 32px;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .custom-title {
+        font-size: clamp(var(--font-s-title), 3.4vw, var(--font-s-title-d));
+    }
+
+    .custom-text {
+        font-size: clamp(1rem, 1vw, 1.125rem);
+    }
+
+    .icon-menu-container {
+        font-size: 3rem;
+        width: 178px;
+        height: 48px;
+    }
 }

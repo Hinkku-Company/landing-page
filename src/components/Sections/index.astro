@@ -1,0 +1,165 @@
+---
+import "./section.css";
+import ImageSection1 from "@/assets/imgs/imgtest1.png";
+import ImageSection2 from "@/assets/imgs/imgtest2.png";
+import ImageSection3 from "@/assets/imgs/imgtest3.png";
+
+const sections: {
+  title: string;
+  imgSrc: string;
+  texts: string[];
+  bgColor: string;
+  idSection: "services" | "about" | "contact";
+}[] = [
+  {
+    title:
+      "Descubre los mejores salones de belleza según la opinión de nuestros usuarios.",
+    imgSrc: ImageSection1,
+    bgColor: "var(--color-bg-section)",
+    idSection: "services",
+    texts: [
+      "HairConnect simplifica el proceso de gestionar citas, permitiendo a los peluqueros centrarse en brindar un servicio excelente",
+      "Fácil gestión de personal: Asigna tareas, administra horarios y controla el rendimiento de tu equipo, todo en un solo lugar. Simplifica la gestión de tu personal y mejora la productividad.",
+    ],
+  },
+  {
+    title: "Conéctate con tus clientes y aumenta su satisfacción.",
+    imgSrc: ImageSection2,
+    bgColor: "var(--color-bg-white)",
+    idSection: "about",
+    texts: [
+      "HairConnect simplifica el proceso de gestionar citas, permitiendo a los peluqueros centrarse en brindar un servicio excelente",
+      "Fácil gestión de personal: Asigna tareas, administra horarios y controla el rendimiento de tu equipo, todo en un solo lugar. Simplifica la gestión de tu personal y mejora la productividad.",
+    ],
+  },
+  {
+    title:
+      "Descubre los mejores salones de belleza según la opinión de nuestros usuarios.",
+    imgSrc: ImageSection3,
+    bgColor: "var(--color-bg-section)",
+    idSection: "contact",
+    texts: [
+      "HairConnect simplifica el proceso de gestionar citas, permitiendo a los peluqueros centrarse en brindar un servicio excelente",
+    ],
+  },
+];
+---
+
+<div class="sections-d">
+  <section
+    id={sections[0].idSection}
+    class={`py-[--padding-sections] px-[1.7rem] hidden md:grid`}
+    style={{ backgroundColor: sections[0].bgColor }}
+  >
+    <div
+      class="section-img-container-d grid justify-center gap-[4.375rem] container mx-auto"
+    >
+      <div class="grid place-items-center w-full order-2 relative">
+        {/* section 1 */}
+        <div
+          class="grid bg-[--primary] rounded-t-[.2rem] absolute top-[-1rem] right-[-1rem] w-[7.5rem] h-[60%]"
+        >
+        </div>
+
+        <img
+          class="w-full h-[inherit] rounded-[1rem] object-cover order-1 relative z-[5]"
+          src={sections[0].imgSrc}
+          alt={`image representation of ${sections[0].title}`}
+        />
+      </div>
+
+      <div class="order-1">
+        <h2
+          class="custom-title text-[--color-title] font-[--font-w-title] pt-[1.875rem] pb-[1.35rem]"
+        >
+          {sections[0].title}
+        </h2>
+        {
+          sections[0].texts.map((text) => (
+            <p class="custom-text font-[--font-w-text] text-[--color-text] pb-[1.20rem]">
+              {text}
+            </p>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section
+    id={sections[1].idSection}
+    class={`py-[--padding-sections] px-[1.7rem] hidden md:grid`}
+    style={{ backgroundColor: sections[1].bgColor }}
+  >
+    <div
+      class="section-img-container-d grid place-items-center justify-center gap-[4.375rem] container mx-auto"
+    >
+      <div class="grid place-items-center w-full relative">
+        <div
+          class="grid bg-[--primary] rounded-t-[.2rem] absolute bottom-[-1rem] left-[-1rem] w-[65%] h-[60%]"
+        >
+        </div>
+
+        <img
+          class="w-full h-[inherit] rounded-[1rem] object-cover order-1 relative z-[5]"
+          src={sections[1].imgSrc}
+          alt={`image representation of ${sections[1].title}`}
+        />
+      </div>
+
+      <div class="">
+        <h2
+          class="custom-title text-[--color-title] font-[--font-w-title] pt-[1.875rem] pb-[1.35rem]"
+        >
+          {sections[1].title}
+        </h2>
+        {
+          sections[1].texts.map((text) => (
+            <p class="custom-text font-[--font-w-text] text-[--color-text] pb-[1.20rem]">
+              {text}
+            </p>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section
+    id={sections[2].idSection}
+    class={`py-[--padding-sections] px-[1.7rem] hidden md:grid`}
+    style={{ backgroundColor: sections[2].bgColor }}
+  >
+    <div
+      class="section-img-container-d grid place-items-center justify-center gap-[4.375rem] container mx-auto"
+    >
+      <div class="grid place-items-center w-full relative order-2">
+        <div
+          class="grid bg-[--primary] rounded-t-[.2rem] absolute top-[-1rem] right-[-1rem] w-[65%] h-[60%]"
+        >
+        </div>
+
+        <img
+          class="w-full h-[inherit] rounded-[1rem] object-cover order-1 relative z-[5]"
+          src={sections[2].imgSrc}
+          alt={`image representation of ${sections[2].title}`}
+        />
+      </div>
+
+      <div class="">
+        <h2
+          class="custom-title text-[--color-title] font-[--font-w-title] pt-[1.875rem] pb-[1.35rem]"
+        >
+          {sections[2].title}
+        </h2>
+        {
+          sections[2].texts.map((text) => (
+            <p class="custom-text font-[--font-w-text] text-[--color-text] pb-[1.20rem]">
+              {text}
+            </p>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</div>

@@ -63,3 +63,21 @@
         transform: translateX(0);
     }
 }
+
+.item-slide-d {
+    grid-template-rows: 8.75rem 2.75rem auto;
+}
+
+.icon-slide-d {
+    width: 64px;
+    height: 64px;
+}
+
+.item-slide-d h3 {
+    font-size: clamp(var(--font-s-subtitle), 1.7vw, var(--font-s-subtitle-d));
+    font-weight: var(--font-w-title);
+}
+
+.item-slide-d p {
+    font-size: clamp(1rem, 1vw, 1.125rem);
+}

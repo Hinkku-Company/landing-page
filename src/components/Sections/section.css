@@ -1,0 +1,23 @@
+.sections-d section:nth-child(1) .section-img-container-d {
+    grid-template-columns: minmax(370px, 760px) minmax(200px, 340px);
+}
+
+.sections-d section:nth-child(1) .section-img-container-d>div {
+    height: clamp(20rem, 40vw, 28.75rem);
+}
+
+.sections-d section:nth-child(2) .section-img-container-d {
+    grid-template-columns: minmax(330px, 520px) minmax(280px, 580px);
+}
+
+.sections-d section:nth-child(2) .section-img-container-d>div:nth-child(1) {
+    height: clamp(10rem, 25vw, 20.625rem);
+}
+
+.sections-d section:nth-child(3) .section-img-container-d {
+    grid-template-columns: minmax(280px, 580px) minmax(330px, 520px);
+}
+
+.sections-d section:nth-child(3) .section-img-container-d>div:nth-child(1) {
+    height: clamp(10rem, 25vw, 20.625rem);
+}
