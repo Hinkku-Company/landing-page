@@ -22,6 +22,8 @@
     "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
-    "@vite-pwa/astro": "^0.1.1"
+    "@vite-pwa/astro": "^0.1.1",
+    "vite-plugin-pwa": "^0.16.4",
+    "workbox-window": "^7.0.0"
   }
 }

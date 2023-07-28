@@ -13,6 +13,10 @@
         "src/*"
       ]
     },
+    "types": [
+      "vite-plugin-pwa/client",
+      "vite-plugin-pwa/info"
+    ],
     "jsx": "react-jsx",
     "jsxImportSource": "react"
   }
