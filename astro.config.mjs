@@ -13,13 +13,13 @@ export default defineConfig({
         enabled: true
         /* other options */
       },
-      base: '/landing-page',
+      base: '/landing-page/',
+      scope: '/landing-page/',
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'HINKKU_isotipo.svg'],
       manifest: {
         name: 'Aphrodite Project',
         short_name: 'Aphrodite Project',
-        start_url: "./landing-page",
         display: "standalone",
         background_color: "#fff",
         theme_color: "#fff",
@@ -58,7 +58,7 @@ export default defineConfig({
         ]
       },
       workbox: {
-        globPatterns: ['**/*.{css,js,html,svg,png,ico,txt}'],
+        globPatterns: ['**/*.{css,js,html,svg,png,ico,txt}']
       }
     })
   ],
