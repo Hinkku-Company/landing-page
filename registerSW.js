@@ -1,0 +1,1 @@
+"serviceWorker"in navigator&&window.addEventListener("load",(()=>{navigator.serviceWorker.register("/landing-pagesw.js",{scope:"/landing-page"})}));
