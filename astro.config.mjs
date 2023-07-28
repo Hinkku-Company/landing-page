@@ -3,62 +3,62 @@ import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 import AstroPWA from '@vite-pwa/astro';
 
-import compress from "astro-compress";
-
 // https://astro.build/config
 export default defineConfig({
   integrations: [
     tailwind(),
     react(),
-    compress(),
     AstroPWA({
-      name: "Aphrodite Project",
-      base: "/landing-page",
+      devOptions: {
+        enabled: true
+        /* other options */
+      },
+      base: '/landing-page',
+      registerType: 'autoUpdate',
+      includeAssets: ['favicon.svg', 'HINKKU_isotipo.svg'],
       manifest: {
         name: 'Aphrodite Project',
         short_name: 'Aphrodite Project',
-        start_url: "/landing-page",
+        start_url: "./landing-page",
         display: "standalone",
         background_color: "#fff",
-        description: "Aphrodite Project es una innovadora app para reservación de citas en salones de belleza y gestión completa de negocios del sector de la belleza.",
+        theme_color: "#fff",
+        description: "Aphrodite Project es una innovadora app para reservación de citas para peluquerías y gestión completa de negocios del sector de la belleza.",
         icons: [
           {
-            "src": "images/touch/homescreen48.png",
-            "sizes": "48x48",
-            "type": "image/png"
+            src: "/landing-page/HINKKU_isotipo.svg",
+            sizes: "48x48",
+            type: "image/svg+xml"
           },
           {
-            "src": "images/touch/homescreen72.png",
-            "sizes": "72x72",
-            "type": "image/png"
+            src: "/landing-page/HINKKU_isotipo.svg",
+            sizes: "72x72",
+            type: "image/svg+xml"
           },
           {
-            "src": "images/touch/homescreen96.png",
-            "sizes": "96x96",
-            "type": "image/png"
+            src: "/landing-page/HINKKU_isotipo.svg",
+            sizes: "96x96",
+            type: "image/svg+xml"
           },
           {
-            "src": "images/touch/homescreen144.png",
-            "sizes": "144x144",
-            "type": "image/png"
+            src: "/landing-page/HINKKU_isotipo.svg",
+            sizes: "144x144",
+            type: "image/svg+xml"
           },
           {
-            "src": "images/touch/homescreen168.png",
-            "sizes": "168x168",
-            "type": "image/png"
+            src: "/landing-page/HINKKU_isotipo.svg",
+            sizes: "168x168",
+            type: "image/svg+xml"
           },
           {
-            "src": "images/touch/homescreen192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-          }
-        ],
-        related_applications: [
-          {
-            platform: "play",
-            url: "https://play.google.com/store/apps/details"
+            src: "/landing-page/HINKKU_isotipo.svg",
+            sizes: "192x192",
+            type: "image/svg+xml"
           }
         ]
+      },
+      workbox: {
+        globPatterns: ['**/*.{css,js,html,svg,png,ico,txt}'],
       }
     })
   ],

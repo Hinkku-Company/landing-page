@@ -1,6 +1,7 @@
 ---
 import "@/styles/index.css";
-
+//@ts-ignore
+import { pwaInfo } from "virtual:pwa-info";
 interface Props {
   title: string;
 }
@@ -21,11 +22,11 @@ const { title } = Astro.props;
     <!-- og -->
     <meta
       name="description"
-      content="Aphrodite Project es una innovadora app para reservación de citas en salones de belleza y gestión completa de negocios del sector de la belleza."
+      content="Aphrodite Project es una innovadora app para reservación de citas para peluquerías y gestión completa de negocios del sector de la belleza."
     />
     <meta
       name="keywords"
-      content="reservación de citas, salones de belleza, belleza, citas de belleza, gestión de salones, aplicación de belleza, citas de salón, belleza y cuidado personal"
+      content="app de peluquerías, reservación de citas, sistema de reserva de citas para peluquerías, salones de belleza, belleza, citas de belleza, gestión de salones, gestión de peluquerías, aplicación de belleza, citas de salón, belleza y cuidado personal"
     />
 
     <meta name="author" content="Hinkku ~ Aphrodite Project" />
@@ -34,7 +35,7 @@ const { title } = Astro.props;
     <meta property="og:title" content="Aphrodite Project" />
     <meta
       property="og:description"
-      content="Aphrodite Project es una innovadora app para reservación de citas en salones de belleza y gestión completa de negocios del sector de la belleza."
+      content="Aphrodite Project es una innovadora app para reservación de citas para peluquerías y gestión completa de negocios del sector de la belleza."
     />
     <meta property="og:type" content="website" />
     <meta
@@ -72,7 +73,21 @@ const { title } = Astro.props;
     />
 
     <link rel="icon" type="image/svg+xml" href="/landing-page/favicon.svg" />
+    <link
+      rel="apple-touch-icon"
+      href="/landing-page/favicon.svg"
+      sizes="180x180"
+    />
+    <link
+      rel="mask-icon"
+      href="/landing-page/HINKKU_isotipo.svg"
+      color="#FFFFFF"
+    />
+    <meta name="theme-color" content="#ffffff" />
     <meta name="generator" content={Astro.generator} />
+
+    <script src="/src/pwa.ts"></script>
+    {pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
   </head>
   <body>
     <slot />
