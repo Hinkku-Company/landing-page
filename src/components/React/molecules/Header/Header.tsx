@@ -36,15 +36,15 @@ export const Header = () => {
             id: 'home'
         },
         {
-            title: "Servicios",
+            title: "Ventajas",
             id: 'services'
         },
         {
-            title: "Nosotros",
-            id: 'about'
+            title: "Información",
+            id: 'info'
         },
         {
-            title: "Contacto",
+            title: "Unirse",
             id: 'contact'
         }
     ];

@@ -8,7 +8,7 @@ export const SectionInvitation = () => {
     }
 
     return (
-        <div className="bg-[--color-bg-white] p-[3.75rem] grid place-items-center md:py-[13rem]">
+        <div id='contact' className="bg-[--color-bg-white] p-[3.75rem] grid place-items-center md:py-[13rem]">
             <div className="md:grid md:justify-items-center container mx-auto">
                 <h3 className="custom-title font-[--font-w-title] text-[--color-title] pb-[2rem] md:text-center">
                     Unete a nuestra comunidad

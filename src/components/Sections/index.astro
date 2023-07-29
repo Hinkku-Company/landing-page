@@ -11,13 +11,13 @@ const sections: {
   imgSrc: string;
   texts: string[];
   bgColor: string;
-  idSection: "services" | "about" | "contact";
+  idSection: "info" | "";
 }[] = [
   {
     title: "Optimiza tu tiempo y conquista a tus clientes.",
     imgSrc: ImageSection1,
     bgColor: "var(--color-bg-section)",
-    idSection: "services",
+    idSection: "info",
     texts: [
       "Descubre una forma sencilla y efectiva de potenciar tu negocio de belleza con nuestra solución de reservación y gestión integradas. Nuestra plataforma te brinda la libertad de gestionar tus citas y recursos de manera eficiente, lo que te permitirá dedicar más tiempo a tus clientes y menos a tareas administrativas.",
       " A través de un sistema intuitivo y fácil de usar, tus clientes podrán reservar sus citas en cualquier momento y desde cualquier lugar, brindándoles la comodidad que buscan en la era digital.",
@@ -27,7 +27,7 @@ const sections: {
     title: "Conéctate con tus clientes y aumenta su satisfacción.",
     imgSrc: ImageSection2,
     bgColor: "var(--color-bg-white)",
-    idSection: "about",
+    idSection: "",
     texts: [
       "No importa si eres un salón de belleza independiente o una cadena de peluquerías, nuestra plataforma está diseñada para adaptarse a tus necesidades específicas y hacer crecer tu negocio.",
       "Potencia tu presencia en línea con una solución moderna y atractiva que te ayudará a destacar en el competitivo mercado de la belleza y el cuidado personal.",
@@ -37,7 +37,7 @@ const sections: {
     title: "Descubre los mejores servicios de belleza y cuidado personal",
     imgSrc: ImageSection3,
     bgColor: "var(--color-bg-section)",
-    idSection: "contact",
+    idSection: "",
     texts: [
       "Sumérgete en un oasis de bienestar y renovación a través de una amplia gama de servicios de belleza y cuidado personal. Nuestra app te conecta con expertos altamente calificados y los mejores salones de belleza y spas de la ciudad.",
     ],
@@ -89,7 +89,6 @@ const sections: {
 
   <!-- 2 -->
   <section
-    id={sections[1].idSection}
     class={`md:py-[--padding-sections] py-[3.125rem] px-[1.7rem] grid`}
     style={{ backgroundColor: sections[1].bgColor }}
   >
@@ -131,7 +130,6 @@ const sections: {
 
   <!-- 3 -->
   <section
-    id={sections[2].idSection}
     class={`md:py-[--padding-sections] py-[3.125rem] py-[3.125rem] px-[1.7rem] grid`}
     style={{ backgroundColor: sections[2].bgColor }}
   >
