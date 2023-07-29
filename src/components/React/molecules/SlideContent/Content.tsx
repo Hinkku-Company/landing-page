@@ -9,7 +9,7 @@ export const SlideContent = () => {
                 <h2 className='text-[--color-title]'>Mejora el alcance de tu negocio</h2>
 
                 <p className='hidden md:block text-[--color-text]'>
-                    Nuestra aplicación facilita la conecc ion con sus clientes y gestionen las citas y estadisticas de manera fluida.
+                    Nuestra aplicación facilita la conección con sus clientes y gestionen las citas y estadisticas de manera fluida.
                 </p>
             </div>
 
