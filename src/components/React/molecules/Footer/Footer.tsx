@@ -19,15 +19,7 @@ export const Footer = () => {
 
                     <div className='flex gap-2'>
                         <a className='link text-[13px]'>
-                            Terms
-                        </a>
-
-                        <p className='text-[13px]'>
-                            and
-                        </p>
-
-                        <a className='link text-[13px]'>
-                            Privacy
+                            Terms and Privacy
                         </a>
                     </div>
                 </div>
