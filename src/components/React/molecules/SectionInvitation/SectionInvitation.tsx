@@ -15,7 +15,7 @@ export const SectionInvitation = () => {
                 </h3>
 
                 <div className="grid gap-4 md:grid-cols-3 md:gap-7 max-w-[38rem] md:w-full">
-                    <StandardInput className="md:col-span-2" placeholder="tucorreo@example.com" />
+                    <StandardInput className="md:col-span-2" placeholder="Correo Electrónico" />
                     <StandardButton className="md:col-span-1" onClick={sendEmail}>Unirse</StandardButton>
                 </div>
             </div>
