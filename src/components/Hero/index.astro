@@ -9,7 +9,7 @@ export const BigTitleText3 = "sin esfuerzo.";
 export const TitleText =
   "Nuestra aplicación facilita que los peluqueros se conecten con sus clientes y gestionen las citas y estadisticas de manera fluida.";
 
-import { IdHome } from "@/utils/contantes";
+import { IdHome, basePath, goToTermsAndPrivacy } from "@/utils/contantes";
 ---
 
 {
@@ -46,6 +46,13 @@ import { IdHome } from "@/utils/contantes";
                   Unirse
                 </StandardButton>
               </div>
+
+              <p class="text-[--white] text-[.60rem] md:text-[.75rem] text-left">
+                Al enviar el correo estas aceptando nuestros
+                <a class="link pl-1" href={`${basePath}${goToTermsAndPrivacy}`}>
+                  Términos y Condiciones
+                </a>
+              </p>
             </div>
           </div>
         </div>

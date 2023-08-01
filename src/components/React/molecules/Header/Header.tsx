@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import { CloseIcon, AphroditeIcon, HamburgerIcon } from '@components/React/atoms';
 import "./Header.css";
-export const Header = () => {
+import { basePath } from '@/utils/contantes';
+export const Header = ({ needBg = false }) => {
     const [navbar, setNavbar] = useState(false);
     const [sticky, setSticky] = useState(false);
 
@@ -23,6 +24,7 @@ export const Header = () => {
 
     const goToSection = (id: string) => {
         setNavbar(false);
+        window.location.href = `${basePath}/#${id}`;
         const element = document.getElementById(id);
 
         if (element) {
@@ -54,37 +56,40 @@ export const Header = () => {
             <nav className={`'w-full fixed z-10 w-full`}>
                 <div className={`w-full ${navbar ? 'h-screen' : ''}`}>
 
-                    <div className={`${sticky && !navbar ? 'navbar-bg' : ''} relative z-20`}>
-                        <div className="container mx-auto flex items-center justify-between py-2 px-3 md:py-5">
-                            <a href='#home'>
-                                <AphroditeIcon SvgClassName="icon-menu-container" />
-                            </a>
+                    <div className={`${sticky && !navbar ? 'navbar-bg ' : ''} relative z-20 `}>
+                        <div className={`w-full ${needBg && !navbar ? 'bg-black' : ''}`}>
+                            <div className="container mx-auto flex items-center justify-between py-2 px-3 md:py-5">
+                                <a className='cursor-pointer' onClick={() => goToSection(itemsMenu[0].id)}>
+                                    <AphroditeIcon SvgClassName="icon-menu-container" />
+                                </a>
 
-                            <div className='hidden md:flex'>
-                                <ul className="font-menu-d font-medium flex gap-[1.25rem]">
-                                    {itemsMenu.map((item, idx: number) =>
-                                        <li key={idx} onClick={() => goToSection(item.id)}>
-                                            <p>
-                                                {item.title}
-                                            </p>
-                                        </li>
-                                    )}
-                                </ul>
-                            </div>
+                                <div className='hidden md:flex'>
+                                    <ul className="font-menu-d font-medium flex gap-[1.25rem]">
+                                        {itemsMenu.map((item, idx: number) =>
+                                            <li key={idx} onClick={() => goToSection(item.id)}>
+                                                <p>
+                                                    {item.title}
+                                                </p>
+                                            </li>
+                                        )}
+                                    </ul>
+                                </div>
 
-                            <div className="md:hidden">
-                                <button
-                                    className="p-2 text-gray-700 rounded-md outline-none"
-                                    onClick={() => setNavbar(!navbar)}
-                                >
-                                    {navbar ? (
-                                        <CloseIcon SvgClassName='icon-menu-open-and-close' />
-                                    ) : (
-                                        <HamburgerIcon SvgClassName='icon-menu-open-and-close' />
-                                    )}
-                                </button>
+                                <div className="md:hidden">
+                                    <button
+                                        className="p-2 text-gray-700 rounded-md outline-none"
+                                        onClick={() => setNavbar(!navbar)}
+                                    >
+                                        {navbar ? (
+                                            <CloseIcon SvgClassName='icon-menu-open-and-close' />
+                                        ) : (
+                                            <HamburgerIcon SvgClassName='icon-menu-open-and-close' />
+                                        )}
+                                    </button>
+                                </div>
                             </div>
                         </div>
+
                     </div>
 
                     <div className={`${navbar ? "grid" : "hidden"} md:hidden animated fixed z-10 top-0 bottom-0 left-0 right-0`}>
