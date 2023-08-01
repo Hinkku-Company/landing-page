@@ -1,0 +1,62 @@
+---
+const privacy = [
+  {
+    title: "Términos de Uso:",
+    text: [
+      "Aceptación de Términos: Al acceder y utilizar Aphrodite, aceptas estos términos y condiciones de uso. Si no estás de acuerdo con estos términos, por favor, no utilices la plataforma.",
+      "Propósito de la Plataforma: Aphrodite es un proyecto en desarrollo que actualmente recopila correos electrónicos para notificar a los usuarios cuando la app esté lista. No se recopilará ni almacenará información adicional sin tu consentimiento explícito.",
+      "Protección de la Información: Garantizamos la seguridad de la información recopilada y utilizaremos medidas técnicas y organizativas apropiadas para protegerla de cualquier acceso no autorizado o divulgación.",
+      "Uso de Correos Electrónicos: Al proporcionar tu correo electrónico, aceptas que podemos utilizarlo para enviarte notificaciones relacionadas con Aphrodite, incluyendo el lanzamiento de la app y otras actualizaciones importantes.",
+    ],
+  },
+  {
+    title: "Política de Privacidad",
+    text: [
+      "Recopilación de Información: Aphrodite solo recopilará la información necesaria para cumplir con su propósito inicial: el correo electrónico para enviar notificaciones. No recopilaremos información personal adicional sin tu consentimiento.",
+      "Uso de la Información: La información recopilada será utilizada exclusivamente para el propósito establecido, es decir, enviar notificaciones sobre el lanzamiento de la app Aphrodite.",
+      "Divulgación a Terceros: No compartiremos, venderemos ni divulgaremos tu información personal a terceros sin tu consentimiento, a menos que estemos legalmente obligados a hacerlo.",
+      "Derechos de los Usuarios: Tienes derecho a acceder, corregir o eliminar tu información personal de nuestra base de datos en cualquier momento. Para ejercer estos derechos, por favor, ponte en contacto con nosotros a través de los canales indicados en la plataforma.",
+      "Cambios en la Política: Esta política de privacidad puede ser actualizada ocasionalmente para reflejar cambios en nuestras prácticas. Te recomendamos revisarla periódicamente para estar informado sobre cualquier modificación.",
+      "Si tienes alguna pregunta o inquietud sobre nuestra Política de Privacidad o Términos de Uso, por favor, contáctanos a través de hinkku.team@gmail.com.",
+    ],
+  },
+];
+---
+
+<div class="w-full pt-6">
+  <div
+    class="container mx-auto md:py-[--padding-sections] py-[3.125rem] px-[1.7rem]"
+  >
+    <h2
+      class="custom-title text-[--color-title] font-[--font-w-title] pt-[1.875rem] pb-[1.35rem]"
+    >
+      {privacy[0].title}
+    </h2>
+
+    {
+      privacy[0].text.map((text) => (
+        <p class="custom-text font-[--font-w-text] text-[--color-text] pb-[1.20rem]">
+          {text}
+        </p>
+      ))
+    }
+  </div>
+
+  <div
+    class="container mx-auto md:py-[--padding-sections] py-[3.125rem] px-[1.7rem]"
+  >
+    <h2
+      class="custom-title text-[--color-title] font-[--font-w-title] pt-[1.875rem] pb-[1.35rem]"
+    >
+      {privacy[1].title}
+    </h2>
+
+    {
+      privacy[1].text.map((text) => (
+        <p class="custom-text font-[--font-w-text] text-[--color-text] pb-[1.20rem]">
+          {text}
+        </p>
+      ))
+    }
+  </div>
+</div>

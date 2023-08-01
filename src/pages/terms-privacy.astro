@@ -1,0 +1,11 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Header, Footer } from "@components/React/molecules";
+import Terms from "@components/TermsAndPrivacy/index.astro";
+---
+
+<Layout title="Aphrodite Project">
+  <Header needBg={true} client:load />
+  <Terms />
+  <Footer client:visible />
+</Layout>

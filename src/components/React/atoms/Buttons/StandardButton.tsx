@@ -25,7 +25,7 @@ export const StandardButton = ({ onClick, children, type, id, title = '', classN
     <button
       onClick={(ev) => {
         ripple && createRipple(ev);
-        console.log(ripple, createRipple)
+        // console.log(ripple, createRipple)
         onClick(ev);
       }}
       type={type}

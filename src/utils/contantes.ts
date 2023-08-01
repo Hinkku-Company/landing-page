@@ -18,3 +18,6 @@ export const itemsMenu = [
 ]
 
 export const IdHome = 'home';
+
+export const basePath = '/landing-page'
+export const goToTermsAndPrivacy = '/terms-privacy';

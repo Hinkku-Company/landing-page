@@ -1,4 +1,5 @@
 
+import { basePath, goToTermsAndPrivacy } from '@/utils/contantes';
 import { AphroditeIcon, InstagramIcon, TikTokIcon, TwitterIcon } from '@components/React/atoms/Icons';
 export const Footer = () => {
     return (
@@ -18,8 +19,8 @@ export const Footer = () => {
                     </p>
 
                     <div className='flex gap-2'>
-                        <a className='link text-[13px]'>
-                            Terms and Privacy
+                        <a href={`${basePath}${goToTermsAndPrivacy}`} className='link text-[13px]'>
+                            Términos y Condiciones
                         </a>
                     </div>
                 </div>
