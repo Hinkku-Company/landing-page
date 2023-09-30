@@ -20,6 +20,7 @@ export default defineConfig({
       manifest: {
         name: 'Aphrodite Project',
         short_name: 'Aphrodite Project',
+        display_override: ["window-controls-overlay"],
         display: "standalone",
         background_color: "#fff",
         theme_color: "#fff",

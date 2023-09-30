@@ -2,6 +2,7 @@
 import "./hero.css";
 import HeroImage from "@/assets/imgs/heroImg.png";
 import { StandardButton, StandardInput } from "@components/React/atoms";
+import { Subscription } from "@components/customHooks/Subscription"
 
 export const BigTitleText1 = "Conéctate con";
 export const BigTitleText2 = "tus clientes";
@@ -36,16 +37,7 @@ import { IdHome, basePath, goToTermsAndPrivacy } from "@/utils/contantes";
 
               <div class="row-span-2" />
 
-              <div class="row-span-1 grid gap-4">
-                <StandardInput type="text" placeholder="Correo Electrónico" />
-                <StandardButton
-                  ripple={true}
-                  className="hero-btn"
-                  onClick={() => {}}
-                >
-                  Unirse
-                </StandardButton>
-              </div>
+              <Subscription />
 
               <p class="text-[--white] text-[.60rem] md:text-[.75rem] text-left">
                 Al enviar el correo estas aceptando nuestros
