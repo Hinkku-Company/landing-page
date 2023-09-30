@@ -5,14 +5,14 @@ import {
   SlideContent,
   SectionInvitation,
   Footer,
+  Hero
 } from "@components/React/molecules";
-import Hero from "@components/Hero/index.astro";
 import Sections from "@components/Sections/index.astro";
 ---
 
 <Layout title="Aphrodite Project">
   <Header client:load />
-  <Hero />
+  <Hero client:load />
   <SlideContent client:load />
   <Sections />
   <SectionInvitation client:load />
