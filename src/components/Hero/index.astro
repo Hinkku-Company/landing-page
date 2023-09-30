@@ -3,6 +3,7 @@ import "./hero.css";
 import HeroImage from "@/assets/imgs/heroImg.png";
 import { StandardButton, StandardInput } from "@components/React/atoms";
 import { Subscription } from "@components/customHooks/Subscription"
+import { Image } from "astro:assets"
 
 export const BigTitleText1 = "Conéctate con";
 export const BigTitleText2 = "tus clientes";
@@ -20,7 +21,7 @@ import { IdHome, basePath, goToTermsAndPrivacy } from "@/utils/contantes";
       class="w-full h-[37.5rem] mh-[67.5rem] relative md:h-[100vh]"
     >
       <div class="w-full h-full relative">
-        <img
+        <Image
           class="w-full h-full img-hero"
           src={HeroImage}
           alt="Image about a haircut in a salon"

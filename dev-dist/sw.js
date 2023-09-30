@@ -78,11 +78,11 @@ define(['./workbox-ab7aa862'], (function (workbox) { 'use strict';
    * See https://goo.gl/S9QRab
    */
   workbox.precacheAndRoute([{
-    "url": "/landing-page/",
-    "revision": "0.2pu6a7ela38"
+    "url": "/landing-page",
+    "revision": "0.8p1h961c74o"
   }], {});
   workbox.cleanupOutdatedCaches();
-  workbox.registerRoute(new workbox.NavigationRoute(workbox.createHandlerBoundToURL("/landing-page/"), {
+  workbox.registerRoute(new workbox.NavigationRoute(workbox.createHandlerBoundToURL("/landing-page"), {
     allowlist: [/^\/$/]
   }));
 

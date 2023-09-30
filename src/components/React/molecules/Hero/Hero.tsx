@@ -1,5 +1,7 @@
 import "./hero.css";
+// @ts-ignore
 import HeroImage from "@/assets/imgs/heroImg.png";
+
 import { IdHome, basePath, goToTermsAndPrivacy } from "@/utils/contantes";
 import { Subscription } from "@components/customHooks/Subscription";
 export const Hero = () => {
@@ -14,7 +16,7 @@ export const Hero = () => {
             <div className="w-full h-full relative">
                 <img
                     className="w-full h-full img-hero"
-                    src={HeroImage}
+                    src={HeroImage.src}
                     alt="Image about a haircut in a salon"
                 />
 

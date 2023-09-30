@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets"
+
 interface Props {
   title: string;
   imgSrc: string;
@@ -15,7 +17,7 @@ const { title, imgSrc, texts, bgColor } = Astro.props;
     <div class="grid bg-[--primary] w-[18rem] h-[0.625rem] rounded-t-[.2rem]">
     </div>
 
-    <img
+    <Image
       class="w-full h-[11rem] rounded-[.5rem] object-cover"
       src={imgSrc}
       alt={`image representation of ${title}`}

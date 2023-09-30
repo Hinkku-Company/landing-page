@@ -3,7 +3,7 @@ import "./section.css";
 import ImageSection1 from "@/assets/imgs/imgtest1.png";
 import ImageSection2 from "@/assets/imgs/imgtest2.png";
 import ImageSection3 from "@/assets/imgs/imgtest3.png";
-
+import { Image } from "astro:assets"
 import MobileContent from "./MobileContent.astro";
 
 const sections: {
@@ -63,7 +63,7 @@ const sections: {
         >
         </div>
 
-        <img
+        <Image
           class="w-full h-[inherit] rounded-[1rem] object-cover order-1 relative z-[5]"
           src={sections[0].imgSrc}
           alt={`image representation of ${sections[0].title}`}
@@ -104,7 +104,7 @@ const sections: {
         >
         </div>
 
-        <img
+        <Image
           class="w-full h-[inherit] rounded-[1rem] object-cover order-1 relative z-[5]"
           src={sections[1].imgSrc}
           alt={`image representation of ${sections[1].title}`}
@@ -145,7 +145,7 @@ const sections: {
         >
         </div>
 
-        <img
+        <Image
           class="w-full h-[inherit] rounded-[1rem] object-cover order-1 relative z-[5]"
           src={sections[2].imgSrc}
           alt={`image representation of ${sections[2].title}`}
